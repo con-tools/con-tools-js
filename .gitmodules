@@ -1,0 +1,12 @@
+[submodule "enyo"]
+	path = enyo
+	url = https://github.com/enyojs/enyo.git
+	branch = 2.5.1-release
+[submodule "lib/onyx"]
+	path = lib/onyx
+	url = https://github.com/enyojs/onyx.git
+	branch = 2.5.1-release
+[submodule "lib/layout"]
+	path = lib/layout
+	url = https://github.com/enyojs/layout.git
+	branch = 2.5.1-release
