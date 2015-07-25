@@ -1,33 +1,34 @@
 {
-    "name": "con-troll-client",
-    "description": "Client side cor the Con-Troll system.",
-    "version": "0.1.0",
-    "homepage": "http://con-troll.org/",
-    "bugs": "http://github.com/con-troll/client/issues",
-    "engines": {
-        "node": ">=0.12.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/con-troll/client.git"
-    },
-    "maintainers": [
-        {
-            "name": "Con-Troll Team",
-            "web": "http://con-troll.org/"
-        }
-    ],
-    "licenses": [
-        {
-            "type": "BSD-3-Clause",
-            "url": "http://opensource.org/licenses/BSD-3-Clause"
-        }
-    ],
-    "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-http-server": "~1.1.0",
-        "grunt-contrib-clean": "~0.6.0",
-        "grunt-contrib-jshint": "~0.10.0"
-    },
-    "dependencies": {}
+  "name": "con-troll-client",
+  "description": "Client side cor the Con-Troll system.",
+  "version": "0.1.0",
+  "homepage": "http://con-troll.org/",
+  "bugs": "http://github.com/con-troll/client/issues",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/con-troll/client.git"
+  },
+  "maintainers": [
+    {
+      "name": "Con-Troll Team",
+      "web": "http://con-troll.org/"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "BSD-3-Clause",
+      "url": "http://opensource.org/licenses/BSD-3-Clause"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-http-server": "~1.1.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-aws-s3": "~0.14.0"
+  },
+  "dependencies": {}
 }
