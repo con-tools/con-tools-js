@@ -5,19 +5,27 @@
 */
 
 enyo.kind({
-	name: "myapp.MainView",
+	name: "ConTroll.MainView",
 	kind: "FittableRows",
 	fit: true,
+	classes: "frame", 
 	components:[
-		{kind: "onyx.Toolbar", content: "Hello World"},
-		{kind: "enyo.Scroller", fit: true, components: [
-			{name: "main", classes: "nice-padding", allowHtml: true}
+		{kind: "onyx.Toolbar", classes: "frame", content: "Hello World"},
+		{kind: "enyo.FittableColumns", classes: "frame", fit: true, components:[
+			{kind: "enyo.Panels", classes: "frame", fit: true, components: [
+				{kind: "enyo.Scroller", classes: "frame", fit: true, components: [
+					{name: "test", classes: "nice-padding frame", allowHtml: true}
+				]},
+			]},
+			{kind: "enyo.FittableRows", classes: "frame", components:[
+				{kind: "enyo.Drawer", classes: "frame", components:[
+					{kind: "onyx.Button", classes: "frame", name: "login", content: "כניסה", ontap: "loginTap"}
+				]}
+			]}
 		]},
-		{kind: "onyx.Toolbar", components: [
-			{kind: "onyx.Button", content: "Tap me", ontap: "helloWorldTap"}
-		]}
+		{kind: "ConTroll.loginDialog", name: "loginScreen"}
 	],
-	helloWorldTap: function(inSender, inEvent) {
-		this.$.main.addContent("The button was tapped.<br/>");
+	loginTap: function(inSender, inEvent) {
+		this.$.loginScreen.show();
 	}
 });
