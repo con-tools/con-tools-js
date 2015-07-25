@@ -6,7 +6,6 @@ module.exports = function(grunt) {
 		aws : grunt.file.readJSON('.secrets.json'), // Load deploy variables
 		aws_s3 : {
 			options : {
-				debug: true,
 				accessKeyId : '<%= aws.AWSAccessKeyId %>',
 				secretAccessKey : '<%= aws.AWSSecretKey %>',
 				region : '<%= aws.AWSRegion %>',
@@ -16,14 +15,11 @@ module.exports = function(grunt) {
 			production : {
 				options : {
 					bucket : 'con-troll.org',
-					differential: true
+					debug: true,
 				},
-				files : [ {
-					expand : true,
-					cwd : '../deploy',
-					src : [ '**' ],
-					dest : '/'
-				} ]
+				files : [ 
+				         { expand : true, cwd : 'deploy/', src : [ '**' ], dest : '/' } 
+				         ]
 			},
 		},
 		deploy: [ 'aws_s3' ]
