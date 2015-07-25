@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 			production : {
 				options : {
 					bucket : 'con-troll.org',
-					debug: true,
+//					debug: true,
 				},
 				files : [ 
 				         { expand : true, cwd : 'deploy/', src : [ '**' ], dest : '/' } 
